@@ -1,4 +1,4 @@
-// Theres a contition in inheritance, we face problem in doing multiple inheritance, there is ambiguity error which means which one to inherit.
+// Theres a condition in inheritance, we face problem in doing multiple inheritance, there is ambiguity error which means which one to inherit.
 // I want to selectly put digest in classes i want, i can do it using mixins
 
 const digest = {
@@ -39,8 +39,10 @@ class Dog extends Animal {
     }
 }
 
-// Object.assign(Dog.prototype, digest); OR  ==>
+// Object.assign(Dog.prototype, digest); //OR  ==>
 Object.assign(Dog.prototype, {...digest, ...sleep});
 
 const dog1 = new Dog(true, "Jacky", 4);
 console.dir(dog1);
+dog1.gatherFood()
+dog1.bark()

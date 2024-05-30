@@ -1,3 +1,5 @@
+// JavaScript was created by Brendan Eich in 1995 during his time at Netscape Communications. Initially it was developed under the name Mocha, but later the language was officially called LiveScript when it first shipped in beta releases of Netscape.
+
 // The way javascript is written is to make it less complicated, so it runs on a single processor. Basically it is single threaded.
 
 /*
@@ -126,3 +128,4 @@ const newArray = [1,2,3,4];
 console.log(newArray.hasOwnProperty("test"));
 newArray.test = "I am added now";
 console.log(newArray.hasOwnProperty("test"));
+console.log(newArray);

@@ -1,7 +1,7 @@
 const friends = [
-  { name: "rahul mohan", age: 27 },
-  { name: "Rohan Singh poona", age: 25 },
-  { name: "Suraj", age: 26 },
+  { name: "Alen Sam Saji", age: 24 },
+  { name: "Mohammed Abrar", age: 26 },
+  { name: "Navaneet Krishnan", age: 25 },
 ];
 
 // ["rahul mohan","rohan singh poona","suraj"];
@@ -29,7 +29,7 @@ const allowedMemberNames = friends
 console.log(allowedMemberNames);
 
 
-// Polyfill is a technique used to add functionality of older web browsers.≈
+// Polyfill is a technique used to add functionality of older web browsers.
 // It is basically a piece of code to add/modify the new functions. It is used to provide modern functionality to web browsers.
 
 // Polyfill for map
@@ -66,4 +66,4 @@ const filteredList = friends.myFilter((el) => {
 
 console.log(filteredList);
 
-// Polyfill is not recommended because of monkey patching, and it is not recommened. The functionalities that already exist, does not need over riding default existing libraries. This is never done in the industry but can be asked in interview.
+// Polyfill is not recommended because of monkey patching. The functionalities that already exist, does not need over riding default existing libraries. This is never done in the industry but can be asked in interview.

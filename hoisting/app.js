@@ -4,15 +4,17 @@
 
 test();
 
-// var can be accessed before it reaches line number 16, but it will be always undefined
+// var can be accessed before it reaches line number 17, but it will be always undefined
 console.log(a);
 
 
 // TDZ
 // A temporal dead zone (TDZ) is the block where a variable is inaccessible until the moment the computer initializes it with a value.
-console.log(b);
+// console.log(c); //tdz
+// console.log(b); //tdz
+
 console.log(test2);
-test2();
+// test2();
 
 var a = 2;
 let b = 2;

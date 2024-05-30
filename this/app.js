@@ -19,7 +19,11 @@ const obj = {
     },
 };
 
+console.log(obj.sayDetails);
 obj.sayDetails();
+
+const print = obj.sayDetails();
+console.log(print);
 
 // we are storing the copy of obj.sayDetails in functionCopy
 // we do not call the functionCopy using obj so the value will be undefined
@@ -73,6 +77,8 @@ obj2.normalFunction();
 // bounded name
 arrow.call(test);
 normalFunction.call(test);
+
+console.log("-------");
 
 
 // In the below case, a normal function barkAfterSeconds will not display the value of this

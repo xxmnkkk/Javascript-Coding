@@ -66,6 +66,10 @@ Array.prototype.helloMohit = () => {
 }
 
 [1,2,3].helloMohit();
+console.log(Array.helloMohit);
+
+const array = [1,2,3];
+console.dir(array)
 
 
 

@@ -14,6 +14,7 @@ function Person() {
 
 const time = new Person();
 console.log(time);
+console.dir(time.currentTime);
 
 // this will print the same time after every 1000ms
 setInterval(() => {

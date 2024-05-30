@@ -35,7 +35,7 @@ function loggerUtil(fileName) {
 // currying function
 const indexFileLogger = loggerUtil("index.js");
 
-// defining error type and storing the fi=unction in variable
+// defining error type and storing the function in variable
 const normalError = indexFileLogger("normal");
 const criticalLogger = indexFileLogger("critical");
 

@@ -3,15 +3,17 @@
 // async function returns promise
 // await performs the same function of 'then' used in promise
 async function getBook() {
-    const response = await fetch("https://64ca8a15700d50e3c70507e4.mockapi.io/api/v1/book");
+    const response = await fetch("https://my-portfolio-backend-d1u9.onrender.com/api/project/getProjectDetails");
     const result = await response.json();
-    console.log(result);
+    console.log("API response: ", result);
+
+    // return result;
 }
 
 getBook();
 
 const test = getBook();
-console.dir(test);
+console.log("Calling test: ", test);
 
 
 

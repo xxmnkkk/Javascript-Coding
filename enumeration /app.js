@@ -9,5 +9,5 @@ Object.defineProperty(object, "sexuality", {
     enumerable: false,
 });
 
-console.log(object);
+console.dir(object);
 console.log(object.sexuality);

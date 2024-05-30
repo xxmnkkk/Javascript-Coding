@@ -1,4 +1,4 @@
-// In java there is no class, even if a class is defined in the code it is not a class. It is something called prototypal inheritance. It is not same as java. If we write class in JS, it is something called Syntactical Sugar.
+// In js there is no class, even if a class is defined in the code it is not a class. It is something called prototypal inheritance. It is not same as java. If we write class in JS, it is something called Syntactical Sugar.
 
 /*
 class Person{
@@ -27,7 +27,7 @@ function Person(name, age){
 // When we call a constructor function with new keyword, an empty object gets created (const this = {}).
 const mohit = new Person("Mohit", 24);
 console.log(mohit);
-
+console.log("Constructor function age: ", mohit.getAge());
 
 
 
@@ -45,7 +45,7 @@ MyConstructor.prototype.myName = function() {
 }
 
 const person = new MyConstructor("Mohit");
-// output is Mohit and then undefined because, it first console.log which is Mohit, and then it prints the return value og myName function, which is undefined;
+// output is Mohit and then undefined because, it first console.log which is Mohit, and then it prints the return value of myName function, which is undefined;
 console.log(person.myName());
 
 // simply calling the function will not print the undefined value.

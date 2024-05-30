@@ -22,7 +22,7 @@ obj.test();
 const testBoundedToObject = test.bind(obj);
 testBoundedToObject();
 
-
+console.log("-----");
 
 
 
@@ -41,6 +41,7 @@ function add(a, b){
 }
 
 add.call(person, 23, 43);
+
 
 
 

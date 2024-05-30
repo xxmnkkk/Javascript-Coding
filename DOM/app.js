@@ -54,17 +54,17 @@ console.dir(heading2Array);
 
 
 
-const friends = ["Mohit", "Kumar"];
+// const friends = ["Mohit", "Kumar"];
 
-const friendsContainer = document.createElement("div");
-const ol = document.createElement("ol");
+// const friendsContainer = document.createElement("div");
+// const ol = document.createElement("ol");
 
-for (let friend of friends) {
-  const li = document.createElement("li");
-  li.innerText = friend;
-  ol.appendChild(li);
-}
-friendsContainer.appendChild(ol);
+// for (let friend of friends) {
+//   const li = document.createElement("li");
+//   li.innerText = friend;
+//   ol.appendChild(li);
+// }
+// friendsContainer.appendChild(ol);
 
-const body = document.querySelector("body");
-body.appendChild(friendsContainer);
+// const body = document.querySelector("body");
+// body.appendChild(friendsContainer);

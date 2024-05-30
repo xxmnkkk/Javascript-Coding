@@ -10,6 +10,6 @@ const obj = {
     name: "Mohit Kumar",
     age: 24
 }
-const {name: fullName} = obj;
+const {name: fullName , age: fullAge} = obj;
 
-console.log(fullName);
+console.log(fullName , " " , fullAge);

@@ -65,10 +65,10 @@ console.log(person2.address.area.name);
 
 
 // to get the set of keys in the object
-console.log(Object.keys(person2));
+console.dir(Object.keys(person2));
 
 // to get the set of values in the object
-console.log(Object.values(person2));
+console.dir(Object.values(person2));
 
 // to get the set of keys and values in the object
-console.log(Object.entries(person2));
+console.dir(Object.entries(person2));

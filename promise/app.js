@@ -2,6 +2,8 @@
 
 /* PROMISE */
 
+// A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
+
 // Promise is an object
 // const promise = new Promise();
 // Promise accepts two parameter - resolve and reject
@@ -62,9 +64,9 @@ const hasHouse = new Promise((resolve, reject) => {
 });
 
 const hasCar = new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     resolve("honda civic");
-    //   }, 2000);
+      setTimeout(() => {
+        resolve("honda civic");
+      }, 2000);
     setTimeout(() => {
     reject("no car, you are poor");
     }, 2000);

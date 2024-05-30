@@ -28,4 +28,4 @@ test3();
 
 // One parameter, we can ignore the ()
 const test4 = para1 => para1;
-console.log(test4());
+console.log(test4("hello"));

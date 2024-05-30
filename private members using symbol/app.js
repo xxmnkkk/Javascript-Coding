@@ -10,7 +10,11 @@
 // Everytime we create a symbol, it is a unique symbol, it can never be compared
 const symbol1 = Symbol("test");
 const symbol2 = Symbol("test");
-console.log(symbol1);
+const obj = {
+  [symbol1]:  1,
+  [symbol1]: 2,
+}
+console.log(obj[symbol1]);
 console.log(symbol1 === symbol2);
 
 
