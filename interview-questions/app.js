@@ -146,6 +146,7 @@ Human.prototype.getName = function () {
 }
 
 console.log(member.getName());
+console.log("Cons func: ", Human());
 
 
 // QUESTION 13 
@@ -491,7 +492,7 @@ nums(10, 1); // "a is large" undefined --> a+b should be next to return
 
 // QUESTION 48
 class PersonTwo {
-    consstructor() {
+    constructor() {
         this.name = "Rome"
     }
 }
