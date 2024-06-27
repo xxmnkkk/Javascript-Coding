@@ -2,7 +2,7 @@
 
 // Debouncing in JavaScript is a practice used to improve browser performance. There might be some functionality in a web page that requires time-consuming computations. If such a method is invoked frequently, it might greatly affect the performance of the browser, as JavaScript is a single-threaded language. 
 
-// In the gmail compose tab, when we write a message, a text with new message is being displayed on the top left corner, when we stop typing for few seconds, the new message changes to draft saved. This is 
+// In the gmail compose tab, when we write a message, a text with new message is being displayed on the top left corner, when we stop typing for few seconds, the new message changes to draft saved. This is what debounce is supposed to do
 
 
 // don't run the fun until the fun is not called for delay

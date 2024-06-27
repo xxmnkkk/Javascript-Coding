@@ -25,10 +25,17 @@ obj.sayDetails();
 const print = obj.sayDetails();
 console.log(print);
 
+console.log("------");
+
 // we are storing the copy of obj.sayDetails in functionCopy
 // we do not call the functionCopy using obj so the value will be undefined
 const funcCopy = obj.sayDetails;
 funcCopy();
+
+const funcCopyTwo = obj.sayDetails.bind(obj); // This is the solution
+funcCopyTwo();
+
+console.log("-----");
 
 // now if we store the objsayDetails with () in functionCopy2, the when we console log it, it will return what ever is returned in the function inside og obj. If nothing is returned, then it will be undefined.
 const functionCopy = obj.sayDetails();
@@ -46,7 +53,7 @@ console.log(functionCopy);
 // This is arrow function
 const arrow = () => {
   // window or global
-  console.log(this.name);
+  console.log("Arrow: ", this.name);
 };
 
 function normalFunction() {

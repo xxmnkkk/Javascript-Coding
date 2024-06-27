@@ -1,6 +1,8 @@
 /* BIND */
 // The bind() method creates a new function and when that new function is called it set this keyword to the first argument which is passed to the bind method, and if any other sequences of arguments preceding the first argument are passed to the bind method then they are passed as an argument to the new function when the new function is called.
 
+console.log("Window.name: ", window.name);
+
 this.name = "Global Name";
 
 function test() {

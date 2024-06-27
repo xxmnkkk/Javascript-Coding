@@ -32,8 +32,7 @@ console.dir(sayHelloMaker);
 // calling the sayHello function again will console.log Hello Mohit.
 console.log(sayHello());
 
-sayHello()
-;
+sayHello();
 /* 
 CLOSURE is a feature of javascript that allows inner functions to access the outer 
 scope of a function. Closure helps in binding a function to its outer boundary and 

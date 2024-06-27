@@ -10,10 +10,11 @@ async function getBook() {
     // return result;
 }
 
+
 getBook();
 
 const test = getBook();
-console.log("Calling test: ", test);
+// console.log("Calling test: ", test);
 
 
 

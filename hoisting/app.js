@@ -50,8 +50,3 @@ var test2 = function () {
 /* execution phase */
 
 // running the code line by line
-
-
-
-a= 5;
-console.log(a);

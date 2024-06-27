@@ -23,7 +23,7 @@ function Person(name, age){
 }
 
 const mohit = new Person("Mohit", 24);
-console.dir(mohit);
+console.log(mohit);
 
 
 
