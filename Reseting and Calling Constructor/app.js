@@ -12,6 +12,7 @@ Animal.prototype.sleep = function() {
 }
 
 const Dog = function(name, age, breed) {
+    // Just like calling super inside of a class we can do the below
     Animal.call(this, name, age);
     this.breed = breed;
 }

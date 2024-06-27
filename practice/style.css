@@ -1,0 +1,43 @@
+/* 
+SASS Mixins
+- The @mixin directive lets you create CSS code that is to be reused throughout the website.
+- The @include directive is created to let you use (include) the mixin.
+
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+.class-name {
+    @include important-text
+}
+
+- A mixin can also include other mixins
+- We can also pass variables to mixins
+
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px); 
+}
+
+
+
+SASS Extends
+.button-basic  {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}
+*/
