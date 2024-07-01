@@ -530,6 +530,7 @@ console.log(q, w, e); // {} '' []
 
 
 // QUESTION 52
+// --> (x => x)("I Love my") is an IIFE. It defines an anonymous arrow function (x => x) and immediately invokes it with the argument "I Love my". Inside the function, x is the parameter that simply returns the argument passed to it ("I Love my" in this case).
 const mom = `${(x => x)("I Love my")} mom`
 console.log(mom); // I Love my mom
 
@@ -543,7 +544,7 @@ console.log(list[numCheck += 1]); // Apple
 // QUESTION 54
 let randomValue = { name: "Lydia" }
 randomValue = 25
-
+// --> (false === "string" --> false)
 if (!typeof randomValue === "string") {
     console.log("Its not a string");
 }
@@ -635,10 +636,12 @@ const handler = {
 const anon = new Proxy({}, handler)
 anon.name = "Im just added now" // Added a new property {} name Im just added now
 anon.name // Accessed a new property {} name
+console.log("Anon: ", anon);
 
 
 // QUESTION 62
 const danger = ["Hyena", "Lion"];
+// --> item: danger[2] assigns the value "Tiger" to danger[2], which means it assigns "Tiger" to the element at index 2 in the array danger.
 ({ item: danger[2] } = { item: "Tiger" });
 console.log(danger); // ['Hyena', 'Lion', 'Tiger']
 
@@ -655,6 +658,8 @@ myFunc(1, 2, 3) // undefined undefined undefined
 const FOO = "FrontEndMaster"
 console.log(!typeof FOO == "object"); // false
 console.log(!typeof FOO == "string"); // false
+console.log(!typeof FOO == false); // true
+
 
 
 // QUESTION 65
@@ -760,7 +765,7 @@ console.log("data2: ", data2); // ['X', 'Y', 'Z']
 
 
 // QUESTION 76
-const dataUsingToReversed = data1.toSorted(); // Returns a new array and does not modify the original array
+const dataUsingToReversed = data1.toSorted() // Returns a new array and does not modify the original array
 data2.reverse(); // Modifies the original array
 
 console.log("data1: ", data1); // ['C', 'B', 'A']
@@ -782,7 +787,7 @@ console.log("g: ", g, "and s: ", s); //g:  10 and s:  A
 
 
 // QUESTION 79
-// let p = [typeof p, typeof m] --> execution will be from right to left, m will be undefined, and p will give the above reference error
+// let p = [typeof p, typeof m] --> execution will be from right to left, m will be undefined, and p will give the below reference error
 // console.log(p); --> ReferenceError: Cannot access 'p' before initialization
 
 
@@ -838,7 +843,7 @@ const ShowLang = {
 }
 
 ShowLang.show();
-let viewLang = ShowLang.show
+let viewLang = ShowLang.show // This assignment does not bind this to the ShowLang object anymore.
 viewLang()
 
 
@@ -889,6 +894,7 @@ console.log(sumCumSqr); // 16
 const obj = { name: "X" }
 delete obj.name
 // obj?.name = "Y" --> Invalid, cannot check using optional chaining while setting a value
+console.log("Object name: ", obj.name);
 
 
 // QUESTION 95
