@@ -70,7 +70,7 @@ let z = a; // storing reference of object a, so now if i try to change using z i
 
 // let z = Object.assign({}, a) -->  If we do this method insted, then object a will not be modified and "Hi" will be printed on screen
 
-z.greeting = "Bye"
+z.greeting = "Bye";
 console.log(a.greeting);
 
 
@@ -131,7 +131,7 @@ function Human(firstName, lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
 
-    return "I will return when the funcition is called normally"
+    // return "I will return when the funcition is called normally"
 }
 
 const member = new Human("Mohit", "Kumar");
@@ -279,11 +279,11 @@ function sayHi() {
     return (() => 0)();
 }
 
-console.log(typeof sayHi());
+console.log(typeof sayHi()); // number
 
 
 // QUESTION 26
-console.log(typeof typeof 1);
+console.log(typeof typeof 1); // string
 
 
 // QUESTION 27
@@ -299,11 +299,11 @@ console.log(numbers); // [1, 2, 3, empty × 7, 11]
         throw new Error();
     }
     catch (x) {
-        x = 1;
+        x = 1; // The catch block catches the error. The parameter x of the catch block is a new variable local to the catch block. This x shadows the x declared outside the try-catch block.
         y = 2;
         console.log("Inside catch: ", x); // 1
     }
-    console.log("outside catch: ", x); // undefined
+    console.log("outside catch: ", x); // undefined --> logs undefined because the outer x was never assigned a value; the assignment x = 1 only affected the local x within the catch block.
     console.log("outside catch: ", y); // 2
 })();
 
@@ -324,7 +324,7 @@ function getMessage() {
 
 function sayHello() {
     try {
-        const data = getMessage()
+        const data = getMessage(); // Because an error is thrown, the line const data = getMessage(); does not complete successfully, and the execution jumps to the catch block. The line console.log("Inside try"); is never executed.
         console.log("Inside try");
     }
     catch (e) {
@@ -353,7 +353,7 @@ console.log(print); // [undefined, undefined, undefined]
 // QUESTION 34
 function getInfo(member, year) {
     member.name = "Mohit"
-    year = "1999"
+    year = "1999" // year = "1999"; changes the local variable year within the function to "1999". This does not affect the outer year variable declared in the global scope.
 }
 
 const person = { name: "Mmohit" }
@@ -404,7 +404,7 @@ console.log(shape); // {x: 10, y: 20}
 
 // QUESTION 38
 function addItem(item, list) {
-    return list.push(item)
+    return list.push(item) // The push method returns the new length of the array
 }
 const result = addItem("Two", ["One"])
 console.log(result); // 2
@@ -414,8 +414,8 @@ console.log(result); // 2
 let userName = "mnk"
 userAge = 25
 
-console.log(delete userName); // false
-console.log(delete userAge); // true
+console.log(delete userName); // false --> Attempting to delete userName returns false because let-declared variables cannot be deleted.
+console.log(delete userAge); // true --> Attempting to delete userAge returns true because global variables (or properties of the global object) can be deleted in a browser environment. In Node.js, global variables declared without var, let, or const cannot be deleted.
 
 
 // QUESTION 40
@@ -682,6 +682,8 @@ if (groceries.indexOf("Chips")) {
 const expObj = { name: "JS" }
 expObj.ref = expObj
 
+console.log("Exp Object: ", expObj); // If we try to log expObj to the console, most browsers and Node.js will display it as an object with a circular reference, typically represented by something like [Circular].
+
 // const str = JSON.stringify(expObj)
 // console.log(str); 
 // TypeError: Converting circular structure to JSON
@@ -718,7 +720,7 @@ console.log(output); // Promise {<pending>} --> because we are not explicitly r
 console.log(1);
 new Promise(function (res) { console.log(2) })
 console.log(3);
-// 1 2 3
+// 1 2 3 --> Even though Promise objects are associated with asynchronous operations, the executor function provided to the Promise constructor runs synchronously. It is only the then handlers, catch handlers, and other Promise methods that run asynchronously.
 
 
 // QUESTION 72
@@ -927,11 +929,10 @@ function showTwo() {
         var x = 999;
         var y = 888;
 
-        // If i put this var inside IIFE then it'll give reference error
-        //    (function(){
-        //     var x = 999;
-        //     var y = 888;
-        //    })();
+        (function () {
+            var x = 999;
+            var y = 888;
+        })();
     }
     console.log(x, y);
 }
@@ -942,7 +943,7 @@ showTwo()
 // QUESTION 100
 console.log("A"); // Prints first
 
-(async function(){
+(async function () {
     const x = await 5;
     console.log(("C")); // Prints third
 })();
@@ -966,10 +967,10 @@ console.log("ARR4 length: ", arr4.length);
 
 
 // QUESTION 103
-function SuperHero(){
+function SuperHero() {
     this.hero = "SilverSurfer";
-    
-    return {hero: "NorenRed"}
+
+    return { hero: "NorenRed" }
 }
 const hero1 = new SuperHero();
 console.log(hero1); // {hero: "NorenRed"}
@@ -1000,9 +1001,9 @@ comAdd(22, 11); // 33
 const key2 = "constructor";
 const obj2 = {};
 
-if(obj2[key2] && key2 in obj2){
+if (obj2[key2] && key2 in obj2) {
     console.log("Hello Admin"); // This will be the output because even if the object is empty, for the two if conditions it will go look in the prototype chain and will find the key there, thats the reason this is the output. we can solve this by using obj2.hasOwnProperty(key2)
-} else{
+} else {
     console.log("Hello Guest");
 }
 
@@ -1013,11 +1014,11 @@ console.dir(obj2);
 // Find out the character count inside the string
 const string2 = 'hare krishna hare krishna krishna hare hare';
 const countObject = {}
-for(let i of string2){
-    if(countObject[i]){
+for (let i of string2) {
+    if (countObject[i]) {
         countObject[i] += 1;
     }
-    else{
+    else {
         countObject[i] = 1;
     }
 }
